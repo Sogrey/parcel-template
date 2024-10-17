@@ -12,6 +12,7 @@ class API {
     /**
      * 引擎主类构造
      * @param {Object} options 配置参数表
+     * @constructor
      */
     constructor(options) {
         let _this = this;

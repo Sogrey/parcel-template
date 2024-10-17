@@ -6,6 +6,11 @@ import { OnException } from "../OnException";
  * @class
  */
 class Common extends BaseObject {
+    /**
+     * 
+     * @constructor
+     * @param {API} api 
+     */
     constructor(api) {
         super();
         this.api = api;

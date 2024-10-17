@@ -5,6 +5,7 @@
 class BaseObject {
     /**
      * 模块基类构造
+     * @constructor
      */
     constructor() { }
 }
