@@ -6,14 +6,17 @@
     "main": "dist/main.js",
     "scripts": {
         "start": "concurrently \"parcel watch src/index.html --out-dir ./dev-bundle/ --public-url ./ --no-cache\" \"cd ./dev-bundle/ && static-server --port=9101 --open\"",
-        "build": "parcel build --no-content-hash src/index.html --out-dir ./dist/ --public-url ./ --no-cache --detailed-report"
+        "build": "parcel build --no-content-hash src/index.html --out-dir ./dist/ --public-url ./ --no-cache --detailed-report",
+        "release": "parcel build --no-content-hash src/libs/main.js --out-dir ./release/",
+        "doc": "jsdoc ./src/libs -d ./release/docs --version -c ./jsdoc.conf.json --recurse"
     },
     "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "author": "Sogrey",
+    "license": "MIT",
     "devDependencies": {
-        "parcel-bundler": "^1.12.5",
         "concurrently": "^6.2.1",
+        "jsdoc": "^4.0.3",
+        "parcel-bundler": "^1.12.5",
         "static-server": "^2.2.1"
     }
 }
