@@ -1,4 +1,7 @@
 // 导入另一个组件
-import main from '../libs/main.js';
+import API from '../libs/main.js';
 
-main();
+let api = new API();
+window.api = api;
+
+api.Common.aException();

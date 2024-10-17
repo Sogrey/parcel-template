@@ -1,7 +1,23 @@
-// 导入一个 CSS 模块
-// import classes from '../css/index.css';
+import Common from "./modules/Common";
 
-export default () => {
-    // console.log(classes.main);
-    console.log("Hello world!");
-};
+class API {
+
+    static VERSION = "1.0.0"
+
+    constructor(options) {
+        let _this = this;
+        _this.options = options;
+
+        this.Common = new Common(this);
+    }
+
+    test () {
+        console.log(`Hi,It's running.\nVersion: ${API.VERSION}`);
+    }
+
+    getVersion () {
+        return API.VERSION
+    }
+}
+
+export default API;
