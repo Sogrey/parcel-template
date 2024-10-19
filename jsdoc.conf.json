@@ -1,9 +1,10 @@
 {
-    "plugins": [],
     "recurseDepth": 10,
     "source": {
         "include": [
-            "./src/libs/"
+            "./src/libs",
+            "package.json",
+            "README.md"
         ],
         "exclude": [ /* array of paths to exclude */],
         "includePattern": ".+\\.js(doc|x)?$",
@@ -17,8 +18,37 @@
             "closure"
         ]
     },
+    "plugins": [
+        "plugins/markdown"
+    ],
     "templates": {
+        "name": "Tui JSDoc Template",
+        "tabNames": {
+            "api": "API",
+            "tutorials": "Examples"
+        },
+        "referenceTitle": "My SDK Name",
         "cleverLinks": false,
-        "monospaceLinks": false
+        "monospaceLinks": false,
+        "disableSort": false,
+        "collapse": true,
+        "useCollapsibles": true,
+        "resources": {
+            "google": "https://www.google.com/"
+        },
+        "logo": {
+            "url": "http://nhnent.github.io/tui.component.tree/latest/styles/logo.png",
+            "width": "150px",
+            "height": "13px",
+            "link": "https://github.com/nhnent/tui.jsdoc-template"
+        },
+        "footerText": "My awesome footer text"
+    },
+    "opts": {
+        "destination": "./release/docs/",
+        "encoding": "utf8",
+        "private": true,
+        "recurse": true,
+        "template": "./node_modules/tui-jsdoc-template"
     }
 }

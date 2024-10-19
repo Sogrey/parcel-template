@@ -1,5 +1,5 @@
 {
-    "name": "test",
+    "name": "parcel_test",
     "version": "1.0.0",
     "description": "",
     "source": "src/lib/main.js",
@@ -8,7 +8,8 @@
         "start": "concurrently \"parcel watch src/index.html --out-dir ./dev-bundle/ --public-url ./ --no-cache\" \"cd ./dev-bundle/ && static-server --port=9101 --open\"",
         "build": "parcel build --no-content-hash src/index.html --out-dir ./dist/ --public-url ./ --no-cache --detailed-report",
         "release": "parcel build --no-content-hash src/libs/main.js --out-dir ./release/",
-        "doc": "jsdoc ./src/libs -d ./release/docs --version -c ./jsdoc.conf.json --recurse"
+        "doc": "jsdoc -c jsdoc.conf.json -d ./release/docs -r",
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
     "author": "Sogrey",
@@ -17,6 +18,8 @@
         "concurrently": "^6.2.1",
         "jsdoc": "^4.0.3",
         "parcel-bundler": "^1.12.5",
-        "static-server": "^2.2.1"
+        "static-server": "^2.2.1",
+        "taffydb": "^2.7.3",
+        "tui-jsdoc-template": "^1.2.2"
     }
 }
