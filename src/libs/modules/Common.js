@@ -39,7 +39,10 @@ class Common extends BaseObject {
     /**
      * 获取引擎版本号
      * @returns 版本号
-     * @see API.getVersion
+     * @see {@link API#getVersion}
+     * @example 
+     * // return '1.0.0'
+     * api.Common.getVersion();
      */
     getVersion () {
         return this.api.getVersion()

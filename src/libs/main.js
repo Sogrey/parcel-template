@@ -20,7 +20,7 @@ class API {
         _this.options = options;
 
         /**
-         * 公共模块
+         * 公共模块. See {@link Common}
          * @see: {@link Common}
          */
         this.Common = new Common(_this);
@@ -36,6 +36,10 @@ class API {
     /**
      * 获取引擎版本号
      * @returns 版本号
+     * @example 
+     * // return '1.0.0'
+     * api.getVersion();
+     * @since 1.0.0
      */
     getVersion () {
         return API.VERSION
